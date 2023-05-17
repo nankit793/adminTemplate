@@ -1,11 +1,11 @@
 import Hero from "@/components/subComponents/Hero/Hero";
 import LoginForm from "@/components/subComponents/LoginForm";
-import RegisterForm from "@/components/subComponents/RegisterForm";
+import ForgotPassForm from "@/components/subComponents/ForgotPassForm";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import Cookies from "js-cookie";
 
-function Register() {
+function ForgotPass() {
   const router = useRouter();
 
   useEffect(() => {
@@ -14,11 +14,20 @@ function Register() {
       router.push("/");
     }
   }, [router]);
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get("token");
+    if (token) {
+      sessionStorage.setItem("token", token);
+      router.push("/");
+    }
+  }, [router, router.query]);
+
   return (
     <>
       <div className="w-full h-screen flex justify-center items-center">
         <div className="w-[90%] max-w-[450px] md:w-[60%]">
-          <RegisterForm />
+          <ForgotPassForm />
         </div>
       </div>
       ;
@@ -26,4 +35,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default ForgotPass;

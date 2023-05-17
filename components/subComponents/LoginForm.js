@@ -131,7 +131,12 @@ function LoginForm() {
                 setpasswordError(false);
               }}
             />
-            <div className="text-color_7 text-right font-rubik">
+            <div
+              onClick={() => {
+                router.push("/forgotPassword");
+              }}
+              className="text-color_7 text-right font-rubik cursor-pointer"
+            >
               Forgot Password?
             </div>
           </div>
@@ -148,7 +153,7 @@ function LoginForm() {
       )}
       {currentPage == 1 && (
         <div className="min-h-[40vh] py-4">
-          <div className="font-runik text-color_5 text-[18px] text-center my-2 font-bold">
+          <div className="font-runik text-color_5 text-[18px] text-center my-2 ">
             OTP verification required
           </div>
           <AccountOTPVerify

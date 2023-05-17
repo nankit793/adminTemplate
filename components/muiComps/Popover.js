@@ -22,6 +22,8 @@ export default function BasicPopover(props) {
         id="mouse-over-popover"
         open={open}
         anchorEl={anchorEl}
+        disableScrollLock={true}
+        // container={this.anchorEl.parentNode}
         onClose={handleClose}
         anchorOrigin={{
           vertical: "bottom",
