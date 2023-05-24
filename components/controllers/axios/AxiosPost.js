@@ -1,11 +1,13 @@
 import axios from "axios";
+import Cookies from "js-cookie";
 
 const axiosPost = async (props) => {
   try {
     const baseURL = process.env.BASE_URL;
-    console.log(baseURL);
+    console.log(Cookies.get("refreshToken"));
     const result = await axios.post(`${baseURL}/${props.url}`, props.body, {
       headers: {
+        refreshToken: Cookies.get("refreshToken"),
         "Content-Type": "application/json",
       },
       withCredentials: true,

@@ -12,6 +12,7 @@ import Cookies from "js-cookie";
 export default function App({ Component, pageProps }) {
   const [isLogged, setIsLogged] = useState(false);
   setTimeout(() => {
+    console.log(Cookies.get("refreshToken"));
     if (Cookies.get("refreshToken")) {
       setIsLogged(true);
     } else {
@@ -21,7 +22,7 @@ export default function App({ Component, pageProps }) {
 
   const router = useRouter();
   // const routesToShowBack = [];
-  const endPoints = ["/login", "/register", "/forgotPassword"];
+  const endPoints = ["/login", "/register", "/forgotPassword", "/updateInfo"];
   return (
     <div
       className={`${endPoints.includes(router.pathname) && "superbackImage"} `}

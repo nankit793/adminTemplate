@@ -5,6 +5,7 @@ import SwiperJS from "@/components/subComponents/Swiper";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import Cookies from "js-cookie";
+import { toast } from "react-toastify";
 function Login() {
   const router = useRouter();
 
@@ -12,17 +13,9 @@ function Login() {
     const Rtoken = Cookies.get("refreshToken");
     if (Rtoken) {
       router.push("/");
+      toast.success("successfuly login");
     }
   }, [router]);
-
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const token = urlParams.get("token");
-    if (token) {
-      Cookies.set("refreshToken", token);
-      router.push("/");
-    }
-  }, [router, router.query]);
 
   return (
     <>

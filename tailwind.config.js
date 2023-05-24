@@ -13,7 +13,7 @@ module.exports = {
         color_4: "orange",
         color_5: "#292929",
         color_6: "#E78716",
-        color_7: "#007FFF",
+        color_7: "#f5f5f5",
         // color_3: "#f5fafd",
         color_8: "#F5F5F5",
         color_9: "#ADD8E6",
@@ -29,6 +29,7 @@ module.exports = {
     fontFamily: {
       rubik: ["Rubik", "sans-serif"],
       workSans: ["Work Sans", "sans-serif"],
+      signika: ["Signika Negative", "sans-serif"],
     },
   },
   plugins: [],

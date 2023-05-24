@@ -7,15 +7,15 @@ import { Autoplay } from "swiper";
 
 function SwiperJS(props) {
   return (
-    <>
+    <div className="">
       <Swiper
         autoplay={{
-          delay: 1000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
         spaceBetween={50}
-        slidesPerView={1}
+        slidesPerView={3}
         // onSlideChange={() => console.log("slide change")}
         // onSwiper={(swiper) => console.log(swiper)}
       >
@@ -28,7 +28,7 @@ function SwiperJS(props) {
             );
           })}
       </Swiper>
-    </>
+    </div>
   );
 }
 
