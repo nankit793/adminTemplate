@@ -15,14 +15,14 @@ function SwiperJS(props) {
         }}
         modules={[Autoplay]}
         spaceBetween={50}
-        slidesPerView={3}
+        slidesPerView={1}
         // onSlideChange={() => console.log("slide change")}
         // onSwiper={(swiper) => console.log(swiper)}
       >
         {props.pages &&
           props.pages.map((page, index) => {
             return (
-              <div key={index}>
+              <div key={index} className="w-full h-auto">
                 <SwiperSlide>{page.pageData}</SwiperSlide>
               </div>
             );

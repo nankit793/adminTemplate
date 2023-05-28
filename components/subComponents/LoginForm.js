@@ -10,6 +10,7 @@ import {
 } from "@/components/controllers/verifiers/general";
 import { toast } from "react-toastify";
 import AccountOTPVerify from "../molecules/AccountOTPVerify";
+import Cookies from "js-cookie";
 
 function LoginForm() {
   const router = useRouter();
@@ -55,6 +56,7 @@ function LoginForm() {
       response.data.message
     ) {
       toast.success(response.data.message);
+      // Cookies.set("username", username);
       router.push("/");
     } else if (
       Boolean(

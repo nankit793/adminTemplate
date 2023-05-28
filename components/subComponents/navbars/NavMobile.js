@@ -7,33 +7,44 @@ import MyModal from "@/components/muiComps/modal";
 import TemporaryDrawer from "@/components/muiComps/Drawer";
 import InputField from "@/components/muiComps/InputFields/InputField";
 import NavMobileData from "./NavMobileData";
-function NavMobile() {
+function NavMobile(props) {
   const [navbarBg, setNavbarBg] = useState(false);
   const [isLogged, setIsLogged] = useState(false);
   const router = useRouter();
+  const restrictPointsForSearchBar = ["/store"];
   return (
     <>
       <div className="flex justify-between w-full items-center  px-2">
         <TemporaryDrawer
           button={
-            <div className="text-[white] gap-2 p-2 bg-color_6 rounded-full flex justify-start ">
+            <div className="text-[white] gap-2 p-2 bg-color_2 rounded-full flex justify-start ">
               <AvatarMUI
                 src="./icons/menu.png"
                 alt="logo"
-                width={25}
-                height={25}
+                width={20}
+                height={20}
               />
             </div>
           }
-          content={<NavMobileData />}
+          content={
+            <NavMobileData
+              setIsLogged={props.setIsLogged}
+              isLogged={props.isLogged}
+            />
+          }
         />
         <div
           onClick={() => {
             router.push("/");
           }}
-          className="p-1 text-[24px] font-wordSans text-[white]"
+          className=" font-wordSans text-[white]"
         >
-          StyleWood
+          <AvatarMUI
+            src="./web/webLogo.png"
+            alt="logo"
+            width={"100%"}
+            height={45}
+          />
         </div>
         <div>
           <AvatarMUI
@@ -44,8 +55,17 @@ function NavMobile() {
           />
         </div>
       </div>
-      <div className="mx-3  my-2 rounded bg-color_2">
-        <InputField fullWidth={true} />
+      <div
+        className={` ${
+          navbarBg || restrictPointsForSearchBar.includes(router.pathname)
+            ? "hidden"
+            : ""
+        }  mx-3  my-2 rounded bg-color_2   `}
+      >
+        <InputField
+          fullWidth={true}
+          label="Search show, product or design..."
+        />
       </div>
     </>
   );

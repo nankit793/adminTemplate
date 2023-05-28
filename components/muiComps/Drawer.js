@@ -29,6 +29,7 @@ export default function TemporaryDrawer(props) {
     <Box
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
       role="presentation"
+      className="superbackImageTwo h-screen"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >

@@ -1,15 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 function ProductCard(props) {
   const { item } = props;
   return (
-    <div className="sm:my-0 my-3 md:w-[200px] mx-auto  cursor-pointer max-w-[250px]">
-      <div className="w-full max-w-[300px] md:w-[200px] mx-auto relative ">
-        <img
-          src={item?.url}
-          className="w-full max-w-[300px] max-h-[300px] md:w-[200px] "
-          alt=""
-        />
+    <div className="sm:my-0 my-3 md:w-[200px] mx-auto max-w-[400px]  cursor-pointer ">
+      <div className="w-full mx-auto relative ">
+        <img src={item?.url} className="w-full  " alt="" />
         <div className="absolute bottom-0 font-signika text-color_2 drop-shadow px-2">
           <div>Rating: {item?.rating}/5</div>
           <div>{item?.size}</div>
