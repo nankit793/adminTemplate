@@ -1,3 +1,5 @@
+You also need to clone the Backend end Part, This repo is Front end only clone this: https://github.com/nankit793/Login-and-Registration-System-with-Google-0Auth-FrontEnd 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
