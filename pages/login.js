@@ -1,6 +1,5 @@
 import Hero from "@/components/subComponents/Hero/Hero";
 import LoginForm from "@/components/subComponents/LoginForm";
-import RegisterForm from "@/components/subComponents/RegisterForm";
 import SwiperJS from "@/components/subComponents/Swiper";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";

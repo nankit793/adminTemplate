@@ -8,7 +8,7 @@ const axiosGet = async (props) => {
     console.log(publicBase);
     const result = await axios.get(
       `${baseURL}/${publicBase}/${props.url}`,
-      props.body,
+      { headers: props.body },
       {
         headers: {
           refreshToken: Cookies.get("refreshToken"),
