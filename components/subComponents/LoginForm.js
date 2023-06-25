@@ -9,7 +9,6 @@ import {
   passwordVerification,
 } from "@/components/controllers/verifiers/general";
 import { toast } from "react-toastify";
-import AccountOTPVerify from "../molecules/AccountOTPVerify";
 import Cookies from "js-cookie";
 
 function LoginForm() {

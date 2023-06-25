@@ -28,14 +28,6 @@ body {
     background-repeat: no-repeat;
     background-size:auto;
 }
-.superbackImageThree{ 
-    background: url("../public/web/footerImage.png");
-    height: "auto";
-    width: "100vw";
-    /* background-position: center; */
-    background-repeat: no-repeat;
-    background-size:contain;
-}
 /* .hero {
     
 } */

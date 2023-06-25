@@ -3,9 +3,7 @@ import Cookies from "js-cookie";
 
 const axiosPost = async (props) => {
   try {
-    // const baseURL = process.env.BASE_URL;
-    // const baseURL = process.env.BASE_URL;
-    const baseURL = "http://localhost:5000";
+    const baseURL = process.env.BASE_URL;
     const result = await axios.post(`${baseURL}/${props.url}`, props.body, {
       headers: {
         refreshToken: Cookies.get("refreshToken"),

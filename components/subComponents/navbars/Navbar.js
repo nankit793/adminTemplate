@@ -38,7 +38,9 @@ function Navbar(props) {
         navbarBg || endPoints.includes(router.pathname)
           ? "bg-color_5"
           : "bg-transparent"
-      } flex justify-between bg-[white] items-center w-full z-10 fixed  font-signika`}
+      } flex justify-between bg-[white] items-center w-full z-10 ${
+        props.isLogged ? "py-0" : "py-2"
+      } fixed  font-signika`}
     >
       <div className="flex  justify-between w-full  items-center text-color_2">
         <div
