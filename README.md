@@ -1,7 +1,20 @@
 
+This is a basic admin template for you to start your business with a boost!
 
+ ## Features already added!
+ a) Login feature
+ b) get user details
+ c) block and unblock the user
+
+ ## This template will work smoothly when used with the backend template!
+ clone this ---> 
+ and read it's readMe!
+
+ ## You can also clone the front-end template! 
+ clone this -->
+ and also read its readMe!
+ 
 ## Getting Started
-
 First, run the development server:
 
 ```bash
