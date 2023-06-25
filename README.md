@@ -5,7 +5,7 @@ This is a basic admin template for you to start your business with a boost!
  a) Login feature
  b) get user details
  c) block and unblock the user
-
+ d) response design
  ## This template will work smoothly when used with the backend template!
  clone this ---> 
  and read it's readMe!
