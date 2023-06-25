@@ -6,6 +6,7 @@ This is a basic admin template for you to start your business with a boost!
  b) get user details
  c) block and unblock the user
  d) response design
+ e) pre-added most used mui components
  ## This template will work smoothly when used with the backend template!
  clone this ---> 
  and read it's readMe!
