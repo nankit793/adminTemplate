@@ -8,11 +8,11 @@ This is a basic admin template for you to start your business with a boost!
  d) response design
  e) pre-added most used mui components
  ## This template will work smoothly when used with the backend template!
- clone this ---> 
+ clone this ---> https://github.com/nankit793/Login-and-Registration-System-with-Google-0Auth-Backend
  and read it's readMe!
 
  ## You can also clone the front-end template! 
- clone this -->
+ clone this --> front-end template is closed for now! we are working on it!
  and also read its readMe!
  
 ## Getting Started
