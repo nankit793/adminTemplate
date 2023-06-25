@@ -42,17 +42,12 @@ function Navbar(props) {
     >
       <div className="flex  justify-between w-full  items-center text-color_2">
         <div
-          className=" font-semibold text-[24px]  font-workSan text-color_2 cursor-pointer"
+          className="text-[24px]  font-workSan text-color_2 cursor-pointer"
           onClick={() => {
             router.push("/");
           }}
         >
-          <AvatarMUI
-            src="./web/webLogo.png"
-            alt="logo"
-            width={"100%"}
-            height={55}
-          />
+          Logo
         </div>
         <div className="flex justify-around gap-7 items-center ">
           {!props.isLogged ? (

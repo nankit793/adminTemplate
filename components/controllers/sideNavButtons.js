@@ -13,17 +13,17 @@ export const links = [
     pageData: <Users />,
   },
   {
-    name: "Products",
+    name: "Premium",
     id: 1,
-    pageData: <Products />,
+    pageData: "premium",
   },
   {
-    name: "Desings",
+    name: "More tabs",
     id: 2,
-    pageData: <Products />,
+    pageData: "More tabs",
   },
   {
-    name: "Orders",
+    name: "Payments",
     id: 4,
     pageData: "",
   },

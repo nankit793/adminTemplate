@@ -3,20 +3,17 @@ import Cookies from "js-cookie";
 
 const axiosPost = async (props) => {
   try {
-    const baseURL = process.env.BASE_URL;
     // const baseURL = process.env.BASE_URL;
-    // const baseURL = "https://wearsbackdev.onrender.com";
-    const result = await axios.post(
-      `${baseURL}/v1/a/${props.url}`,
-      props.body,
-      {
-        headers: {
-          refreshToken: Cookies.get("refreshToken"),
-          "Content-Type": "application/json",
-        },
-        withCredentials: true,
-      }
-    );
+    // const baseURL = process.env.BASE_URL;
+    const baseURL = "http://localhost:5000";
+    const result = await axios.post(`${baseURL}/${props.url}`, props.body, {
+      headers: {
+        refreshToken: Cookies.get("refreshToken"),
+        username: Cookies.get("username"),
+        "Content-Type": "application/json",
+      },
+      withCredentials: true,
+    });
     if (result && result.status === 200 && result.data) {
       return { result, data: result.data, state: true };
     }

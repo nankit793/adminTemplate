@@ -16,10 +16,7 @@ function Users() {
     }
     setSearching(true);
     const response = await axiosGet({
-      url: "getInfo",
-      body: {
-        username,
-      },
+      url: "admin/getInfo",
     });
     if (
       response &&
@@ -42,7 +39,7 @@ function Users() {
       return toast.error("username required");
     }
     const response = await axiosPost({
-      url: "user/block",
+      url: "admin/user/block",
       body: {
         username,
       },
@@ -68,7 +65,7 @@ function Users() {
       return toast.error("username required");
     }
     const response = await axiosPost({
-      url: "user/unblock",
+      url: "admin/user/unblock",
       body: {
         username,
       },

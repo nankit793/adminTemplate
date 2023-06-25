@@ -37,7 +37,7 @@ function LoginForm() {
     }
     setProcessing(true);
     const response = await axiosPost({
-      url: "login",
+      url: "admin/login",
       body: {
         username,
         password,
